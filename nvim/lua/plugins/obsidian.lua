@@ -44,6 +44,15 @@ return {
       attachments = {
         folder = "attachments",
       },
+      ----- use Obsidian app in linux to run :obs open ---------------------
+      open = {
+        func = function(uri)
+          vim.fn.jobstart({
+            "/usr/local/bin/obsidian",
+            uri,
+          }, { detach = true })
+        end,
+      },
     },
   },
 }
